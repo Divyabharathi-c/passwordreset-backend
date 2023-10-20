@@ -21,7 +21,7 @@ databaseConnection();
 //routes
 app.use('/',userRouter);
 app.use('/todo',isAuth,todoRouter);
-app.use('/rp', resetroute)
+app.use('/repass', resetroute)
 
 //listen port
 app.listen(PORT,()=>{console.log('Server running in port',PORT);})
