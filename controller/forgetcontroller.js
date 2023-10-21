@@ -33,7 +33,7 @@ const resetUrl = `http://localhost:5173/repass/reset/${resetToken}`;
    });
 
    var mailoptions = {
-    from: 'divyabharathi1995.csit@gmail.com',
+    from: 'divyabharathi.csit@gmail.com',
     to: email,
     subject: "Reset Password",
     html:`<h1>Reset Password</h1><h2>Click on the link to reset your password</h2><h3>${resetUrl}</h3>`
