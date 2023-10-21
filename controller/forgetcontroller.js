@@ -52,11 +52,13 @@ const resetUrl = `http://localhost:5173/repass/reset/${resetToken}`;
 
 //  Route to handle password reset request
 const resetPassword = async (req, res) => {
-    const { token, password } = req.body;
+    const { password } = req.body;
+   
     
-    // Verify reset token
-    console.log("token: ", token);
-    const user = await User.findOne({ resetToken:token });
+    // // Verify reset token
+    // console.log("token: ", token);
+    // const user = await User.findOne({ resetToken:token });
+    const user = await User.findOne({ token: req.params.resetToken });
     if (!user) {
       return res.status(400).json({ message: 'Invalid token' });
     }
