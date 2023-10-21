@@ -60,7 +60,7 @@ const resetPassword = async (req, res) => {
     // const user = await User.findOne({ resetToken:token });
     const user = await User.findOne({ token: req.params.resetToken });
     if (!user) {
-      return res.status(400).json({ message: 'Invalid token' });
+      return res.status(400).json({ message: 'Invalid token 1' });
     }
     
     // Update password
