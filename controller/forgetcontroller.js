@@ -58,7 +58,7 @@ const resetPassword = async (req, res) => {
     // // Verify reset token
     // console.log("token: ", token);
     // const user = await User.findOne({ resetToken:token });
-    const user = await User.findOne({ token: req.params.resetToken });
+    const user = await User.findOne({ resetToken: req.params.token });
     if (!user) {
       return res.status(400).json({ message: 'Invalid user not found' });
     }
